@@ -3,17 +3,17 @@
 <title>Store Calculator</title>   
 <script>    
 
-// item1 rounded to two decimals:  
+// item1 :  
 var item1 = prompt("Enter Price for first item in dollars and cents");   
 item1 = parseFloat(item1);   
 var cost1 = item1;   
 
-// item2 rounded to two decimals:  
+// item2 :  
 var item2 = prompt("Enter Price for the second item in dollars and cents");   
 item2 =parseFloat(item2);   
 var cost2 = item2;    
 
-// item2 rounded to two decimals:  
+// item2:  
 var item3 = prompt("Enter Price for the third item in dollars and cents");   
 item3 = parseFloat(item3);   
 var cost3 = item3;   
@@ -23,9 +23,9 @@ var cost3 = item3;
 costTotal = parseFloat(cost1 + cost2 + cost3) ;
 
 //Total Amount of tax
-costTax = parseFloat(costTotal * 0.07) ;
+costTax = parseFloat(costTotal * 0.07);
 
-//Total with Tax
+//Total with Tax rounded to two decimal places
 totalWithTax = parseFloat(costTotal + costTax).toFixed(2) ;
 
 </script>  
