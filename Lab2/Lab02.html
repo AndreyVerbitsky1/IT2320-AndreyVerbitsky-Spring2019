@@ -1,0 +1,42 @@
+<html>   
+<head>    
+<title>Store Calculator</title>   
+<script>    
+
+// item1 rounded to two decimals:  
+var item1 = prompt("Enter Price for first item in dollars and cents");   
+item1 = parseFloat(item1).toFixed(2);   
+var cost1 = item1;   
+
+// item2 rounded to two decimals:  
+var item2 = prompt("Enter Price for the second item in dollars and cents");   
+item2 =parseFloat(item2).toFixed(2);   
+var cost2 = item2;    
+
+// item2 rounded to two decimals:  
+var item3 = prompt("Enter Price for the third item in dollars and cents");   
+item3 = parseFloat(item3).toFixed(2);   
+var cost3 = item3;   
+
+//cost total
+costTotal = parseFloat(cost1 + cost2 + cost3).toFixed(2) ;
+
+//Total Amount of tax
+costTax = parseFloat(costTotal * 0.07).toFixed(2);
+
+//Total with Tax
+totalWithTax = parseFloat(costTotal + costTax).toFixed(2);
+
+</script>  
+</head>   
+<body>   
+<script>  
+
+// Ouptut cost1, cost2, cost3, costTotal, costTax, and TotalwithTax:  
+document.write("<h1>Grocery Shopping Cost Calculator</h1>");  
+document.write("Cost for the first item  = " + cost1 + "$","<br>" + "Cost for the second item = " + cost2 + "$", "<br>" + "Cost for the third item   = " + cost3 + "$", 
+"<br><br>" + "Total cost before taxes= " + costTotal + "$", "<br><br>" + "Total Amount of Tax = " + costTax + "$",  "<br><br>"  + "Total with Tax= " + costTax + "$",  "<br><br>");  
+</script>   
+Thanks for using the Shopping Cost Calculator application!  
+</body>   
+</html>    
