@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Simple Calculator</title>
+        <style>
+                body { font-family: sans-serif; font-size: 0.8em; }
+                input { font-family: sans-serif; font-size: 1em; }
+                </style>
+<script>
+function calc(){
+            var operand1 = parseInt(document.getElementById('operand1').value); 
+        
+            var operand2 = parseInt(document.getElementById('operand2').value);
+        
+            var Sign = document.getElementById('operators').value;
+        
+            if (Sign === '+') {
+                operand2 = document.getElementById('Result').value = operand1+operand2;
+            }
+            else if (Sign === '-'){
+                operand2 = document.getElementById('Result').value = operand1-operand2;
+            }
+            else if (Sign === '/'){
+                operand2 = document.getElementById('Result').value = operand1/operand2;
+            }
+            else if (Sign === '*'){
+                operand2 = document.getElementById('Result').value = operand1*operand2;
+            
+            }
+        }
+</script> 
+</head>
+<body>
+<form>
+    Operand 1:<br><input type="text" id="operand1" name="operand1">&nbsp;<br><br>
+
+	<select id="operators">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="/">/</option>
+    <option value="*">*</option>
+    </select><br><br>
+
+    Operand 2:<br><input type="text" id="operand2" name="operand2">&nbsp;<br><br>
+
+    <button onclick="calc();">Calculate</button>
+    <input type="text" id="Result"/><br><br>
+</form>
+
+</body>
+</html>
