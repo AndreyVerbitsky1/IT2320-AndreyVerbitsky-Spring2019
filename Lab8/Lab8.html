@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <!-- Include jQuery from a CDN here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        // Modify the following event to use jQuery's (document).ready function.
+        //window.onload = function () {
+            $(document).ready(function() {
+            // Modify the following line of code to use jQuery's .text() method.
+            //document.getElementById("footer").innerHTML = "&copy;Cuyahoga Community College";    
+              $("#footer").text("&copy;Cuyahoga Community College");
+              });
+            
+        // Add a .hover event here..  Within the .hover, call addClass and removeClass to set the class attribute for programs.
+              //added it in the new script Under degree programs list
+     
+    </script>
+    <style>
+        span {
+            background-color: gold;
+        }
+         a:hover {
+         background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tri-C Information Technology</h1>
+    <div class="info">Under the leadership of College-wide Dean and Executive Director Dr. Monique Wilson, the IT Center of Excellence aims to increase the number of IT professionals trained for middle-skill careers in Northeast Ohio.
+        The IT Center provides streamlined pathways toward careers in these areas and others while being more responsive to the needs of both industry and community partners. New certificate programs in data analytics, cloud computing and data center management were rolled out in fall 2015 along with a graduate certificate in cyber security analytics. 
+    </div>
+    <h2>Degree Programs</h2>
+
+    <div id="programs"><button id="Hide1">Hide</button> <button id="Expand1">Expand</button>
+        <ul>
+            <li><a>Computer Networking Hardware</a></li>
+            <li><a>Computer Networking Software</a></li>
+            <li><a>Programming & Development</a></li>
+            <li><a>Buiness Solutions</a></li>
+        </ul>
+        <script>
+        $( "#programs li" ).hover(
+        function() {
+          $( this ).append( $( "<span> Additional gold background applied when hovering over li elements in programs</span>" ) );
+        }, function() {
+        $( this ).find( "span:last" ).remove();
+        });
+
+        $("#Hide1").click(function(){
+         $("ul").hide();
+         });
+        $("#Expand1").click(function(){
+         $("ul").show();
+     });
+
+        </script>
+    </div>
+    <h2>Certificates</h2> <button id="Hide2">Hide</button> <button id="Expand2">Expand</button>
+    <div id="certificates">
+        <ul>
+            <li>Mobile Application Development</li>
+            <li>Web Application Programming</li>
+            <li>Programming & Development - Post-Degree</li>
+            <li>Buiness Solutions - Post-Degree</li>
+        </ul>
+        <script>
+        $("#Hide2").click(function(){
+         $("ul").hide();
+         });
+        $("#Expand2").click(function(){
+         $("ul").show();
+     });
+        </script>
+    </div>
+    <!-- Add a form that allows users to enter their email address here -->
+    <div id="footer">
+        
+    </div>
+</body>
+</html>
