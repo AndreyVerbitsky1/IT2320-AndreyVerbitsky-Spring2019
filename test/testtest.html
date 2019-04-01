@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en"
-
-<head>
-    <meta charset="utf-8"/>
-    <title>Javascript images</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
-</head>
+<html>
 <body>
-<div id"message">
-<p>This is a really improtant notification</p>
-<P>pie is nice</P>
-</div>
-<script src"jscode.js"></script>
+
+<p>different ways to access JSON objects</p>
+
+<p id="lab10"></p>
+
+<script>
+  var MyVariable = { "Name":"Andrey", "Major":"Programming and Development", "FavoriteLanguage":"Java" }
+
+//First way
+
+  document.getElementById("lab10").innerHTML += MyVariable.Name + "<br>";
+  document.getElementById("lab10").innerHTML += MyVariable.Major + "<br>"+ "<br>";
+
+//Second way
+document.getElementById("lab10").innerHTML += MyVariable["Name"] + "<br>";
+document.getElementById("lab10").innerHTML += MyVariable["Major"] + "<br>";
+
+</script>
+
 </body>
 </html>
