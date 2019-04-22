@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<h1>First Page</h1>
+
+<input type = "button" id="Page1" value= "Go to Page 2" onclick="Redirect(); Page1HitCount();">
+
+<script>
+
+function Redirect() {
+
+window.location="file:///C:/Users/user/Desktop/IT2030%20Code/IT2320-AndreyVerbitsky-Spring2019/Lab13/Page2.html";
+
+}
+function Page1HitCount() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("getCookieByName").innerHTML = "You have visited this page " + localStorage.clickcount + " times.";
+  }			
+}
+
+</script>
+
+<div id="getCookieByName"></div>
+
+</body>
+
+</html

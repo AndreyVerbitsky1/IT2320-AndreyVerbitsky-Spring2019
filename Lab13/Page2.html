@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<h1>Second Page</h1>
+
+<input type = "button" id="Page2" value= "Go Back" onclick="goBack(); Page2HitCount();">
+
+<script>
+function goBack() {
+  window.history.back();
+}
+function Page2HitCount() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("getCookieByName").innerHTML = "You have visited this page " + localStorage.clickcount + " times.";
+  } 
+}
+
+</script>
+
+<div id="getCookieByName"></div>
+
+</body>
+
+</html>
